@@ -1,0 +1,30 @@
+/* .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.login-background {
+    
+    background-image: url(/images/login_images/omid-armin-DIp71kvwXhU-unsplash\ \(1\).jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    
+   
+    }
+
+    .card_bg{
+        background-color:rgba(0, 0, 0, .2)
+    }
+
+    .index-background{
+        background-color: rgba(0, 0, 0, 0.844);
+    } 
+
+    .spec{
+        background-color:rgba(0, 0, 0, .05)
+    } */
