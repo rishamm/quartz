@@ -496,7 +496,7 @@ module.exports = {
     return new Promise((resolve,reject)=>{
       console.log("uuuuuuuuuuuuuuuuuuuuukkkkkkkkkkkkkk");
       const crypto = require('crypto')
-      let hash = crypto.createHmac('sha256', key_secret).update(details['payment[razorpay_order_id]']+'|'+details['payment[razorpay_payment_id]'])
+      let hash = crypto.createHmac('sha256', process.env.Razorpay_keySecret).update(details['payment[razorpay_order_id]']+'|'+details['payment[razorpay_payment_id]'])
       hash = hash.digest('hex')
       if(hash == details['payment[razorpay_signature]']){
         console.log("kkkkkkkkkkkkkkkkuuuuuuuuuuuuuuuuuuuuuuu");

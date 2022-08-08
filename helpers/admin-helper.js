@@ -155,8 +155,8 @@ getCategory : ()=>{
                 }
             }
         ])
-        console.log(displayCategory[0])
-        resolve(displayCategory)
+        console.log(displayCategory[2])
+        resolve(displayCategory[2])
     })
 },
 deleteCategory:(id)=>{
@@ -172,32 +172,7 @@ updateCategory:(id,categoryData)=> {
         resolve(updateCategoryone)
     })
 },
-getCategory : ()=>{
-    return new Promise(async(resolve,reject)=>{ 
-        let displayCategory = await user.aggregate([
-            {
-                $project:{
-                    _id:0,
-                    category:{
-                        $filter:{
-                            input: '$category',
-                            as:'category',
-                            cond: {
-                                $eq: [
-                                    '$$category.isdeleted',false,
-                                ]
-                            },
-                            
-                        }, 
-                    },
-                }
-            }
-        ])
-        resolve(displayCategory[0])
-        console.log("hhhhheheheheheheheheheheheh");
-        console.log(displayCategory[0])
-    })
-},
+
 
 
 
